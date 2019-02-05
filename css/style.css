@@ -15,13 +15,14 @@ body {
   background-color: #333;
   font: 15px/1.4 Helvetica, Arial, sans-serif;
   margin: 0;
-  width:900px;
-  margin:auto;
+  max-width: 900px;
+  min-width: 320px;
+  margin: auto;
   padding: 25px 25px 50px;
 }
 
 a {
-  color: #C00;
+  color: #c00;
 }
 
 .page {
@@ -41,31 +42,30 @@ a {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-  .header img {
-    width: 30%;
-  }
+.header img {
+  width: 30%;
+}
 
 .nav {
-  background-color: #B00;
+  background-color: #b00;
   list-style: none;
-  float: left;
   margin: 0;
   margin-right: 5%;
   padding: 0;
   width: 25%;
 }
 
-  .nav a {
-    border-bottom: 1px solid #900;
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    padding: 10px 20px;
-  }
+.nav a {
+  border-bottom: 1px solid #900;
+  color: #fff;
+  display: inline;
+  font-weight: bold;
+  padding: 10px 20px;
+}
 
-  .nav a:hover {
-    background-color: #D00;
-  }
+.nav a:hover {
+  background-color: #d00;
+}
 
 .main {
   float: left;
@@ -73,12 +73,12 @@ a {
   width: 65%;
 }
 
-  .main img {
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 5px;
-    width: 30%;
-  }
+.main img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  width: 30%;
+}
 
 .breadcrumbs {
   list-style: none;
@@ -87,33 +87,45 @@ a {
   padding: 0;
 }
 
-  .breadcrumbs li {
-    display: inline;
-  }
+.breadcrumbs li {
+  display: inline;
+}
 
-  .breadcrumbs li:before {
-    content: '\00BB';
-    margin: 0 10px;
-  }
+.breadcrumbs li:before {
+  content: "\00BB";
+  margin: 0 10px;
+  display: inline;
+}
 
-  .breadcrumbs li:first-child:before {
-    content: none;
-  }
+.breadcrumbs li:first-child:before {
+  content: none;
+}
 
 .footer {
-  background-color: #B00;
+  background-color: #b00;
   clear: both;
   margin: 0;
   padding: 10px 20px;
+  float: left;
 }
 
-  .footer a {
-    color: white;
-  }
+.footer a {
+  color: white;
+}
 
-  .footer li {
-    border-right: 1px solid #900;
-    display: inline;
-    margin-right: 15px;
-    padding-right: 15px;
+.footer li {
+  border-right: 1px solid #900;
+  display: inline-block;
+  margin-right: 15px;
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 640px) {
+  body .nav {
+    width: 25%;
+    margin-right: 5%;
   }
+  body .main {
+    width: 65%;
+  }
+}
